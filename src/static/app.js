@@ -10,10 +10,10 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch("/activities");
       const activities = await response.json();
 
-      // Clear loading message
+      // Limpiar mensaje de carga
       activitiesList.innerHTML = "";
 
-      // Populate activities list
+      // Llenar lista de actividades
       Object.entries(activities).forEach(([name, details]) => {
         const activityCard = document.createElement("div");
         activityCard.className = "activity-card";
@@ -23,21 +23,21 @@ document.addEventListener("DOMContentLoaded", () => {
         activityCard.innerHTML = `
           <h4>${name}</h4>
           <p>${details.description}</p>
-          <p><strong>Schedule:</strong> ${details.schedule}</p>
-          <p><strong>Availability:</strong> ${spotsLeft} spots left</p>
+          <p><strong>Horario:</strong> ${details.schedule}</p>
+          <p><strong>Disponibilidad:</strong> ${spotsLeft} lugares disponibles</p>
         `;
 
         activitiesList.appendChild(activityCard);
 
-        // Add option to select dropdown
+        // Agregar opción al selector
         const option = document.createElement("option");
         option.value = name;
         option.textContent = name;
         activitySelect.appendChild(option);
       });
     } catch (error) {
-      activitiesList.innerHTML = "<p>Failed to load activities. Please try again later.</p>";
-      console.error("Error fetching activities:", error);
+      activitiesList.innerHTML = "<p>No se pudieron cargar las actividades. Intenta de nuevo más tarde.</p>";
+      console.error("Error al cargar actividades:", error);
     }
   }
 
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         messageDiv.className = "success";
         signupForm.reset();
       } else {
-        messageDiv.textContent = result.detail || "An error occurred";
+        messageDiv.textContent = result.detail || "Ocurrió un error";
         messageDiv.className = "error";
       }
 
@@ -74,10 +74,10 @@ document.addEventListener("DOMContentLoaded", () => {
         messageDiv.classList.add("hidden");
       }, 5000);
     } catch (error) {
-      messageDiv.textContent = "Failed to sign up. Please try again.";
+      messageDiv.textContent = "No se pudo inscribir. Intenta de nuevo.";
       messageDiv.className = "error";
       messageDiv.classList.remove("hidden");
-      console.error("Error signing up:", error);
+      console.error("Error al inscribirse:", error);
     }
   });
 
