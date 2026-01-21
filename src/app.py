@@ -21,57 +21,57 @@ app.mount("/static", StaticFiles(directory=os.path.join(Path(__file__).parent,
 
 # In-memory activity database
 activities = {
-    "Chess Club": {
-        "description": "Learn strategies and compete in chess tournaments",
-        "schedule": "Fridays, 3:30 PM - 5:00 PM",
+    "Club de Ajedrez": {
+        "description": "Aprende estrategias y compite en torneos de ajedrez",
+        "schedule": "Viernes, 15:30 - 17:00",
         "max_participants": 12,
         "participants": ["michael@mergington.edu", "daniel@mergington.edu"]
     },
-    "Programming Class": {
-        "description": "Learn programming fundamentals and build software projects",
-        "schedule": "Tuesdays and Thursdays, 3:30 PM - 4:30 PM",
+    "Clase de Programación": {
+        "description": "Aprende fundamentos de programación y desarrolla proyectos de software",
+        "schedule": "Martes y Jueves, 15:30 - 16:30",
         "max_participants": 20,
         "participants": ["emma@mergington.edu", "sophia@mergington.edu"]
     },
-    "Gym Class": {
-        "description": "Physical education and sports activities",
-        "schedule": "Mondays, Wednesdays, Fridays, 2:00 PM - 3:00 PM",
+    "Clase de Gimnasia": {
+        "description": "Educación física y actividades deportivas",
+        "schedule": "Lunes, Miércoles y Viernes, 14:00 - 15:00",
         "max_participants": 30,
         "participants": ["john@mergington.edu", "olivia@mergington.edu"]
     },
-    "Basketball": {
-        "description": "Competitive basketball games and drills",
-        "schedule": "Mondays and Wednesdays, 4:00 PM - 5:30 PM",
+    "Básquetbol": {
+        "description": "Juegos y entrenamientos competitivos de básquetbol",
+        "schedule": "Lunes y Miércoles, 16:00 - 17:30",
         "max_participants": 15,
         "participants": ["alex@mergington.edu"]
     },
-    "Soccer Club": {
-        "description": "Soccer practice and friendly matches",
-        "schedule": "Tuesdays and Thursdays, 4:00 PM - 5:30 PM",
+    "Club de Fútbol": {
+        "description": "Práctica de fútbol y partidos amistosos",
+        "schedule": "Martes y Jueves, 16:00 - 17:30",
         "max_participants": 18,
         "participants": ["sarah@mergington.edu", "james@mergington.edu"]
     },
-    "Art Studio": {
-        "description": "Painting, drawing, and sculpture techniques",
-        "schedule": "Wednesdays, 3:30 PM - 5:00 PM",
+    "Estudio de Arte": {
+        "description": "Técnicas de pintura, dibujo y escultura",
+        "schedule": "Miércoles, 15:30 - 17:00",
         "max_participants": 16,
         "participants": ["isabella@mergington.edu"]
     },
-    "Music Band": {
-        "description": "Learn and perform music in an ensemble",
-        "schedule": "Mondays and Fridays, 3:30 PM - 4:30 PM",
+    "Banda de Música": {
+        "description": "Aprende y toca música en conjunto",
+        "schedule": "Lunes y Viernes, 15:30 - 16:30",
         "max_participants": 25,
         "participants": ["lucas@mergington.edu", "grace@mergington.edu"]
     },
-    "Debate Team": {
-        "description": "Develop public speaking and argumentation skills",
-        "schedule": "Tuesdays, 4:00 PM - 5:30 PM",
+    "Equipo de Debate": {
+        "description": "Desarrolla habilidades de oratoria y argumentación",
+        "schedule": "Martes, 16:00 - 17:30",
         "max_participants": 12,
         "participants": ["rachel@mergington.edu"]
     },
-    "Science Club": {
-        "description": "Explore experiments and scientific discoveries",
-        "schedule": "Thursdays, 3:30 PM - 5:00 PM",
+    "Club de Ciencias": {
+        "description": "Explora experimentos y descubrimientos científicos",
+        "schedule": "Jueves, 15:30 - 17:00",
         "max_participants": 20,
         "participants": ["noah@mergington.edu", "ava@mergington.edu"]
     }
